@@ -1,4 +1,8 @@
-﻿using System;
+﻿//--------------------------------------------------
+//Connect to SQL Server using Windows Authentication
+//--------------------------------------------------
+
+using System;
 using System.Data.SqlClient;
 
 namespace sqlserver
