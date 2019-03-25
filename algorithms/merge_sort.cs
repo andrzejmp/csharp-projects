@@ -1,35 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
-namespace Merge_sort
+namespace nerge_sort
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            List<int> unsorted = new List<int>();
-            List<int> sorted;
-
-            Random random = new Random();
-
-            Console.WriteLine("Unsorted array elements:");
-            for (int i = 0; i < 10; i++)
-            {
-                unsorted.Add(random.Next(0, 30));
-            }
-            PrintOutAll(unsorted);     
-
-            sorted = MergeSort(unsorted);
-
-            Console.WriteLine("Sorted array elements: ");
-            PrintOutAll(sorted);
-            Console.Write("\n");
-        }
-
-
-        private static List<int> MergeSort(List<int> unsorted)
+        public static List<int> MergeSort(List<int> unsorted)
         {
             if (unsorted.Count <= 1)
                 return unsorted;
@@ -52,7 +28,7 @@ namespace Merge_sort
             return Merge(left, right);
         }
 
-        private static List<int> Merge(List<int> left, List<int> right)
+        public static List<int> Merge(List<int> left, List<int> right)
         {
             List<int> result = new List<int>();
 
@@ -95,6 +71,29 @@ namespace Merge_sort
             Console.WriteLine();
         }
 
+        
+        static void Main(string[] args)
+        {
+            List<int> unsorted = new List<int>();
+            List<int> sorted;
+
+            Random random = new Random();
+
+            Console.WriteLine("Unsorted list:");
+            for (int i = 0; i < 10; i++)
+            {
+                unsorted.Add(random.Next(0, 30));
+            }
+            PrintOutAll(unsorted);     
+
+            sorted = MergeSort(unsorted);
+
+            Console.WriteLine("Sorted list: ");
+            PrintOutAll(sorted);
+            Console.Write("\n");
+        }
 
     }
 }
+
+
