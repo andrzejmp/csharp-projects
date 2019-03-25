@@ -81,7 +81,7 @@ namespace nerge_sort
 
             for (int i = 0; i < 10; i++)
             {
-                unsorted.Add(random.Next(0, 30));
+				unsorted.Add(random.Next(0, 30));
             }
             
 			Console.WriteLine("Unsorted list:");
