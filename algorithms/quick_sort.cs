@@ -63,16 +63,15 @@ class Program
 
 	static void Main() 
 	{
-  
 		List<int> theList = new List<int>();
 		Random random = new Random();
-		
-		Console.WriteLine("Unsorted list:");
+				
 		for (int i = 0; i < 10; i++)
 		{
 			theList.Add(random.Next(0, 30));
 		}
 		
+		Console.WriteLine("Unsorted list:");
 		PrintOutAll(theList);     
 
 		QuickSort(theList, 0, theList.Count-1);

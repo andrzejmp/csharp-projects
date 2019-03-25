@@ -79,12 +79,13 @@ namespace nerge_sort
 
             Random random = new Random();
 
-            Console.WriteLine("Unsorted list:");
             for (int i = 0; i < 10; i++)
             {
                 unsorted.Add(random.Next(0, 30));
             }
-            PrintOutAll(unsorted);     
+            
+			Console.WriteLine("Unsorted list:");
+			PrintOutAll(unsorted);     
 
             sorted = MergeSort(unsorted);
 
